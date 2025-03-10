@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Aragão | Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Images/icone.ico">
+</head>
+<body>
+    <!-- Tela de introdução com efeito de digitação -->
+    <div class="intro-container">
+        <h1 id="typing"></h1><span class="cursor">|</span>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <!-- Cabeçalho estilizado -->
+        <header class="header">
+            <nav class="nav-container">
+                <div class="logo">
+                    <a href="#">
+                        <img src="Images/logo.png" alt="Logo GA">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Seção inicial -->
+        <section class="hero">
+            <div class="container">
+                <div class="left">
+                    <h1>Gabriel Aragão</h1>
+                    <h2>Engenheiro de Computação</h2>
+                </div>
+                <div class="right">
+                    <img src="Images/FotoG.jpg" alt="Gabriel Aragão">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="section">
+            <h2>Sobre Mim</h2>
+            <div class="sobre-content">
+                <p>Sou um entusiasta da tecnologia e da inovação, apaixonado por resolver problemas e desenvolver soluções eficientes. Atualmente, estou cursando Engenharia da Computação no Senai Cimatec e o Bacharelado Interdisciplinar em Ciência e Tecnologia na Universidade Federal da Bahia. Meu objetivo é sempre aprimorar minhas habilidades e contribuir com projetos dinâmicos e inovadores.</p>
+        
+                <p>Tenho experiência com diversas linguagens de programação, incluindo C, C++, Java, HTML e Python. Além disso, possuo conhecimento em ferramentas como Git, VSCode e Power BI. Meu envolvimento acadêmico inclui monitorias em disciplinas de cálculo e fenômenos eletromagnéticos, além de participação em competições como a NASA SpaceApps, onde minha equipe ficou entre os Top 3 da edição regional de Salvador.</p>
+        
+                <p>Minha trajetória inclui liderança em eventos como IntegralMUN e SalMUN, além de iniciação científica em Computação Quântica. Sempre em busca de aprendizado contínuo, estou aberto a desafios que me permitam crescer profissionalmente e aplicar meus conhecimentos para impactar positivamente o mundo da tecnologia.</p>
+            </div>
+        </section>
+        
+
+        <!-- Seção Projetos -->
+        <section id="projetos" class="section">
+            <h2>Projetos</h2>
+            <div class="projetos-container">
+                <div class="projeto">
+                    <h3>Projeto-Modelagem-de-Dados</h3>
+                    <p>Este projeto implementa um banco de dados relacional para a gestão de uma clínica odontológica, permitindo o cadastro de pacientes, controle de agendamentos e administração de estoque. Desenvolvido utilizando PL/SQL, foca na otimização e integridade dos dados.</p>
+                </div>
+                <div class="projeto">
+                    <h3>UNO.C</h3>
+                    <p>Implementação do jogo UNO em linguagem C, desenvolvida para a disciplina de Algoritmos e Estrutura de Dados. O projeto utiliza listas encadeadas para a lógica do baralho e dos jogadores, proporcionando uma experiência interativa via terminal.</p>
+                </div>
+            </div>
+            <a href="https://github.com/gabrielfrz" target="_blank" class="github-link">Veja mais no GitHub</a>
+        </section>
+        
+
+        <!-- Seção Contato -->
+<section id="contato" class="section">
+    <h2>Contato</h2>
+    <form id="contactForm" class="contact-form">
+        <input type="text" id="name" placeholder="Seu Nome" required>
+        <input type="email" id="email" placeholder="Seu Email" required>
+        <textarea id="message" placeholder="Sua Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="responseMessage"></p> <!-- Mensagem de resposta -->
+</section>
+
+
+    <script src="js/script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="http://www.linkedin.com/in/gabriel-aragaoeng" target="_blank">
+                    <img src="Images/linkedin2.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/gabrielfrz" target="_blank">
+                    <img src="Images/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/gabrielmba_/" target="_blank">
+                    <img src="Images/instagram.png" alt="Instagram">
+                </a>
+                
+            </div>
+            <p class="copyright">© 2025 Gabriel Aragão. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
