@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cursorElement = document.querySelector(".cursor");
     const introContainer = document.querySelector(".intro-container");
     const mainContent = document.querySelector(".main-content");
-    const footer = document.querySelector(".footer"); // Pegamos o rodapé
+    const footer = document.querySelector(".footer");
     const text = "Gabriel Aragão";
     let index = 0;
 
@@ -19,10 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     introContainer.style.display = "none";
                     document.body.classList.add("show-main");
                     mainContent.style.display = "flex";
-
                     setTimeout(() => {
                         mainContent.style.opacity = "1";
-                        document.body.classList.add("show-footer"); // Ativa a exibição do rodapé corretamente
+                        document.body.classList.add("show-footer");
                     }, 500);
                 }, 1000);
             }, 1000);
@@ -31,3 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(typeEffect, 500);
 });
+
+
+function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+}

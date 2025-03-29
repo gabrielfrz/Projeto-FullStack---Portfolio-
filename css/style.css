@@ -1,4 +1,3 @@
-/* Reset básico */
 html, body {
     margin: 0;
     padding: 0;
@@ -9,7 +8,8 @@ html, body {
     scroll-behavior: smooth;
 }
 
-/* Cabeçalho estilizado */
+
+/* Cabeçalho fixo */
 .header {
     width: 100%;
     position: fixed;
@@ -23,7 +23,7 @@ html, body {
     z-index: 100;
 }
 
-/* Navegação */
+/* Container da navegação */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -31,49 +31,6 @@ html, body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-links li {
-    display: inline-block;
-    position: relative;
-}
-
-.nav-links li a {
-    color: #ccd6f6;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.2s;
-}
-
-.nav-links li a:hover {
-    color: #64ffda;
-    text-shadow: 0px 0px 10px rgba(100, 255, 218, 0.8);
-}
-
-/* Efeito de barra animada abaixo do link */
-.nav-links li a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0;
-    height: 3px;
-    background: #64ffda;
-    transition: width 0.3s, left 0.3s;
-}
-
-.nav-links li a:hover::after {
-    width: 100%;
-    left: 0;
 }
 
 /* Logo */
@@ -93,7 +50,60 @@ html, body {
     filter: drop-shadow(0px 0px 15px #64ffda);
 }
 
-/* Introdução */
+/* Menu de navegação (desktop) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links li a:hover {
+    color: #64ffda;
+    text-shadow: 0px 0px 10px rgba(100, 255, 218, 0.8);
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: #64ffda;
+    transition: width 0.3s, left 0.3s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Botão de menu para Mobile*/
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: #64ffda;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    z-index: 2001; 
+}
+/
 .intro-container {
     display: flex;
     justify-content: center;
@@ -121,11 +131,12 @@ html, body {
     animation: blink 0.7s infinite;
 }
 
+/* Animação do cursor */
 @keyframes blink {
     50% { opacity: 0; }
 }
 
-/* Ocultação do conteúdo principal no início */
+
 .main-content {
     display: none;
     opacity: 0;
@@ -141,7 +152,7 @@ html, body {
     opacity: 1;
 }
 
-/* Seção Hero */
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -164,7 +175,7 @@ html, body {
     color: #64ffda;
 }
 
-/* Foto */
+/* Foto de perfil */
 .right img {
     width: 250px;
     border-radius: 50%;
@@ -173,6 +184,7 @@ html, body {
     animation: glitch-border 1.5s infinite linear alternate;
 }
 
+/* Animação da foto */
 @keyframes glitch-border {
     0%, 100% {
         box-shadow: 0px 0px 10px #64ffda, 0px 0px 20px rgba(100, 255, 218, 0.5);
@@ -182,7 +194,7 @@ html, body {
     }
 }
 
-/* Seções gerais */
+
 .section {
     width: 80%;
     max-width: 1200px;
@@ -190,10 +202,11 @@ html, body {
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgba(100, 255, 218, 0.2);
-    text-align: center;
+    text-align: justify;
 }
 
-#sobre, #contato {
+#sobre,
+#contato {
     background: rgba(255, 255, 255, 0.05);
 }
 
@@ -201,7 +214,7 @@ html, body {
     background: rgba(100, 255, 218, 0.1);
 }
 
-/* Projetos */
+
 .projetos-container {
     display: flex;
     flex-direction: column;
@@ -235,7 +248,7 @@ html, body {
     background: #52e6c4;
 }
 
-/* Formulário de Contato */
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -245,7 +258,8 @@ html, body {
     margin: auto;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     border: none;
@@ -274,7 +288,7 @@ html, body {
     background: #52e6c4;
 }
 
-/* Rodapé */
+
 .footer {
     background: #0a192f;
     color: #8892b0;
@@ -314,4 +328,56 @@ html, body {
 .social-links a:hover img {
     opacity: 1;
     transform: scale(1.1);
+}
+
+ /*Ajustes para Mobile*/
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh; 
+        background-color: rgba(10, 25, 47, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        gap: 25px;
+        z-index: 2000; 
+        border-bottom: 1px solid #64ffda;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    }
+    .nav-links li {
+        width: 100%;
+    }
+    .nav-links li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 18px;
+        color: #ccd6f6;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    .nav-links li a:hover {
+        color: #64ffda;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+   
+    .menu-toggle {
+        display: block;
+    }
 }
