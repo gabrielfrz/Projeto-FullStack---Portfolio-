@@ -1,6 +1,3 @@
-/* ================================
-   RESET & ESTILOS GLOBAIS
-================================ */
 html, body {
     margin: 0;
     padding: 0;
@@ -11,10 +8,8 @@ html, body {
     scroll-behavior: smooth;
 }
 
-/* ================================
-   CABEÇALHO & NAVEGAÇÃO
-================================ */
-/* Cabeçalho fixo */
+
+
 .header {
     width: 100%;
     position: fixed;
@@ -28,7 +23,7 @@ html, body {
     z-index: 100;
 }
 
-/* Container da navegação */
+
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -55,7 +50,7 @@ html, body {
     filter: drop-shadow(0px 0px 15px #64ffda);
 }
 
-/* Menu de navegação (desktop) */
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -81,7 +76,7 @@ html, body {
     text-shadow: 0px 0px 10px rgba(100, 255, 218, 0.8);
 }
 
-/* Efeito de barra animada abaixo do link */
+
 .nav-links li a::after {
     content: "";
     position: absolute;
@@ -98,8 +93,7 @@ html, body {
     left: 0;
 }
 
-/* Botão de menu (hambúrguer) */
-/* Botão de menu (hambúrguer) */
+
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -108,10 +102,10 @@ html, body {
     position: absolute;
     top: 20px;
     right: 50px;
-    z-index: 2001; /* Maior que o .nav-links */
+    z-index: 2001; 
 }
 
-/* Menu (mobile) */
+
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
@@ -137,9 +131,7 @@ html, body {
 
 
 
-/* ================================
-   TELA DE INTRODUÇÃO
-================================ */
+
 .intro-container {
     display: flex;
     justify-content: center;
@@ -172,9 +164,7 @@ html, body {
     50% { opacity: 0; }
 }
 
-/* ================================
-   CONTEÚDO PRINCIPAL
-================================ */
+
 .main-content {
     display: none;
     opacity: 0;
@@ -190,9 +180,7 @@ html, body {
     opacity: 1;
 }
 
-/* ================================
-   SEÇÃO HERO
-================================ */
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -215,7 +203,6 @@ html, body {
     color: #64ffda;
 }
 
-/* Foto de perfil */
 .right img {
     width: 250px;
     border-radius: 50%;
@@ -224,7 +211,6 @@ html, body {
     animation: glitch-border 1.5s infinite linear alternate;
 }
 
-/* Animação da foto */
 @keyframes glitch-border {
     0%, 100% {
         box-shadow: 0px 0px 10px #64ffda, 0px 0px 20px rgba(100, 255, 218, 0.5);
@@ -234,9 +220,7 @@ html, body {
     }
 }
 
-/* ================================
-   SEÇÕES GERAIS
-================================ */
+
 .section {
     width: 80%;
     max-width: 1200px;
@@ -256,9 +240,7 @@ html, body {
     background: rgba(100, 255, 218, 0.1);
 }
 
-/* ================================
-   PROJETOS
-================================ */
+
 .projetos-container {
     display: flex;
     flex-direction: column;
@@ -292,9 +274,7 @@ html, body {
     background: #52e6c4;
 }
 
-/* ================================
-   FORMULÁRIO DE CONTATO
-================================ */
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -334,9 +314,7 @@ html, body {
     background: #52e6c4;
 }
 
-/* ================================
-   RODAPÉ
-================================ */
+
 .footer {
     background: #0a192f;
     color: #8892b0;
@@ -378,11 +356,9 @@ html, body {
     transform: scale(1.1);
 }
 
-/* ================================
-   MEDIA QUERIES (MOBILE)
-================================ */
+
 @media (max-width: 768px) {
-    /* Ajustes no cabeçalho e navegação */
+    
     .header {
         padding: 10px 20px;
         flex-direction: column;
@@ -392,7 +368,7 @@ html, body {
         flex-direction: column;
         align-items: flex-start;
     }
-    /* Menu fixo para mobile */
+   
     .nav-links {
         position: fixed;
         top: 0;
@@ -405,7 +381,7 @@ html, body {
         align-items: center;
         display: none;
         gap: 25px;
-        z-index: 2000; /* Menor que o .menu-toggle */
+        z-index: 2000; 
         border-bottom: 1px solid #64ffda;
         box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
     }
@@ -427,8 +403,16 @@ html, body {
     .nav-links.active {
         display: flex;
     }
-    /* Exibe o botão de menu no mobile */
+   
     .menu-toggle {
         display: block;
     }
+}
+.projeto h3 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.projeto h3 a:hover {
+    color: #007BFF;
 }
